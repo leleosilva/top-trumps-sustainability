@@ -1,19 +1,9 @@
 extends MarginContainer
 
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	GlobalSettings.toggle_fullscreen(Save.game_data.fullscreen_on)
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
 
 func _on_StartButton_pressed():
 	if get_tree().change_scene("res://scenes/StartGameMenu.tscn") != OK:
@@ -21,7 +11,7 @@ func _on_StartButton_pressed():
 
 
 func _on_OptionsButton_pressed():
-	if get_tree().change_scene("res://scenes/PauseMenu.tscn") != OK:
+	if get_tree().change_scene("res://scenes/SettingsMenu.tscn") != OK:
 		print("An unexpected error occured when trying to pause the game.")
 
 

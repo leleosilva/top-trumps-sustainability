@@ -14,6 +14,11 @@ config/name="super_trunfo"
 run/main_scene="res://scenes/MainMenu.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+GlobalSettings="*res://Loader/global_settings.gd"
+Save="*res://Loader/save.gd"
+
 [display]
 
 window/size/width=1280

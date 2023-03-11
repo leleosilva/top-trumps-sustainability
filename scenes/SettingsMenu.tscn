@@ -1,0 +1,223 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://fonts/godiva-reguler.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://scripts/SettingsMenu.gd" type="Script" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 32
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxLine" id=9]
+content_margin_top = 0.0
+content_margin_bottom = 0.0
+color = Color( 1, 1, 1, 1 )
+grow_begin = -3.0
+grow_end = -3.0
+thickness = 6
+
+[sub_resource type="StyleBoxLine" id=8]
+content_margin_top = 0.0
+content_margin_bottom = 0.0
+color = Color( 1, 1, 1, 1 )
+grow_begin = -3.0
+grow_end = -3.0
+thickness = 6
+
+[sub_resource type="StyleBoxLine" id=7]
+content_margin_top = 0.0
+content_margin_bottom = 0.0
+color = Color( 1, 1, 1, 1 )
+grow_begin = -3.0
+grow_end = -3.0
+thickness = 6
+
+[sub_resource type="DynamicFont" id=2]
+size = 24
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxEmpty" id=4]
+
+[sub_resource type="StyleBoxEmpty" id=5]
+
+[sub_resource type="StyleBoxEmpty" id=6]
+
+[sub_resource type="StyleBoxEmpty" id=3]
+
+[sub_resource type="DynamicFont" id=10]
+size = 32
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxEmpty" id=11]
+
+[sub_resource type="StyleBoxEmpty" id=12]
+
+[sub_resource type="StyleBoxEmpty" id=13]
+
+[sub_resource type="StyleBoxEmpty" id=14]
+
+[node name="SettingsMenu" type="MarginContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+
+[node name="SettingsMenuBackground" type="ColorRect" parent="."]
+margin_right = 1280.0
+margin_bottom = 720.0
+color = Color( 0.439216, 0.431373, 0.321569, 1 )
+
+[node name="SettingsMenuVBox" type="VBoxContainer" parent="."]
+margin_right = 1280.0
+margin_bottom = 720.0
+
+[node name="Control" type="Control" parent="SettingsMenuVBox"]
+margin_right = 1280.0
+margin_bottom = 150.0
+rect_min_size = Vector2( 0, 150 )
+
+[node name="CenterSettings" type="CenterContainer" parent="SettingsMenuVBox"]
+margin_top = 154.0
+margin_right = 1280.0
+margin_bottom = 554.0
+size_flags_vertical = 0
+
+[node name="SettingsOrganizer" type="VBoxContainer" parent="SettingsMenuVBox/CenterSettings"]
+margin_left = 277.0
+margin_right = 1002.0
+margin_bottom = 400.0
+rect_min_size = Vector2( 600, 400 )
+custom_constants/separation = 20
+
+[node name="MasterVol" type="HBoxContainer" parent="SettingsMenuVBox/CenterSettings/SettingsOrganizer"]
+margin_right = 725.0
+margin_bottom = 44.0
+rect_min_size = Vector2( 500, 0 )
+custom_constants/separation = 70
+
+[node name="MasterVolLabel" type="Label" parent="SettingsMenuVBox/CenterSettings/SettingsOrganizer/MasterVol"]
+margin_top = 6.0
+margin_right = 215.0
+margin_bottom = 38.0
+custom_fonts/font = SubResource( 1 )
+text = "Volume master"
+valign = 1
+
+[node name="MasterSlider" type="HSlider" parent="SettingsMenuVBox/CenterSettings/SettingsOrganizer/MasterVol"]
+margin_left = 325.0
+margin_right = 725.0
+margin_bottom = 44.0
+rect_min_size = Vector2( 400, 44 )
+size_flags_horizontal = 10
+size_flags_vertical = 1
+custom_styles/slider = SubResource( 9 )
+value = 100.0
+rounded = true
+
+[node name="MusicVol" type="HBoxContainer" parent="SettingsMenuVBox/CenterSettings/SettingsOrganizer"]
+margin_top = 64.0
+margin_right = 725.0
+margin_bottom = 108.0
+rect_min_size = Vector2( 500, 0 )
+custom_constants/separation = 70
+
+[node name="MusicVolLabel" type="Label" parent="SettingsMenuVBox/CenterSettings/SettingsOrganizer/MusicVol"]
+margin_top = 6.0
+margin_right = 255.0
+margin_bottom = 38.0
+custom_fonts/font = SubResource( 1 )
+text = "Volume da música"
+valign = 1
+
+[node name="MusicSlider" type="HSlider" parent="SettingsMenuVBox/CenterSettings/SettingsOrganizer/MusicVol"]
+margin_left = 325.0
+margin_right = 725.0
+margin_bottom = 44.0
+rect_min_size = Vector2( 400, 44 )
+size_flags_horizontal = 10
+size_flags_vertical = 1
+custom_styles/slider = SubResource( 8 )
+value = 100.0
+rounded = true
+
+[node name="SFXVol" type="HBoxContainer" parent="SettingsMenuVBox/CenterSettings/SettingsOrganizer"]
+margin_top = 128.0
+margin_right = 725.0
+margin_bottom = 172.0
+rect_min_size = Vector2( 500, 0 )
+custom_constants/separation = 70
+
+[node name="SFXVolLabel" type="Label" parent="SettingsMenuVBox/CenterSettings/SettingsOrganizer/SFXVol"]
+margin_top = 6.0
+margin_right = 159.0
+margin_bottom = 38.0
+custom_fonts/font = SubResource( 1 )
+text = "Volume SFX"
+valign = 1
+
+[node name="SFXSlider" type="HSlider" parent="SettingsMenuVBox/CenterSettings/SettingsOrganizer/SFXVol"]
+margin_left = 325.0
+margin_right = 725.0
+margin_bottom = 44.0
+rect_min_size = Vector2( 400, 44 )
+size_flags_horizontal = 10
+size_flags_vertical = 1
+custom_styles/slider = SubResource( 7 )
+value = 100.0
+rounded = true
+
+[node name="DisplayMode" type="HBoxContainer" parent="SettingsMenuVBox/CenterSettings/SettingsOrganizer"]
+margin_top = 192.0
+margin_right = 725.0
+margin_bottom = 224.0
+rect_min_size = Vector2( 500, 0 )
+custom_constants/separation = 70
+
+[node name="DisplayModeLabel" type="Label" parent="SettingsMenuVBox/CenterSettings/SettingsOrganizer/DisplayMode"]
+margin_right = 229.0
+margin_bottom = 32.0
+custom_fonts/font = SubResource( 1 )
+text = "Modo de display"
+valign = 1
+
+[node name="DisplayModeOption" type="OptionButton" parent="SettingsMenuVBox/CenterSettings/SettingsOrganizer/DisplayMode"]
+margin_left = 585.0
+margin_right = 725.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 140, 0 )
+size_flags_horizontal = 10
+custom_colors/font_color_hover = Color( 0.952941, 0.796078, 0.423529, 1 )
+custom_colors/font_color_pressed = Color( 0.831373, 0.686275, 0.345098, 1 )
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 5 )
+custom_styles/focus = SubResource( 6 )
+custom_styles/normal = SubResource( 3 )
+text = "Janela"
+items = [ "Janela", null, false, 0, null, "Tela cheia", null, false, 1, null ]
+selected = 0
+
+[node name="ReturnButtonMargin" type="MarginContainer" parent="SettingsMenuVBox"]
+margin_top = 558.0
+margin_right = 1280.0
+margin_bottom = 690.0
+size_flags_vertical = 0
+custom_constants/margin_bottom = 100
+
+[node name="ReturnButton" type="Button" parent="SettingsMenuVBox/ReturnButtonMargin"]
+margin_left = 575.0
+margin_right = 704.0
+margin_bottom = 32.0
+size_flags_horizontal = 4
+custom_colors/font_color_hover = Color( 0.952941, 0.796078, 0.423529, 1 )
+custom_colors/font_color_pressed = Color( 0.831373, 0.686275, 0.345098, 1 )
+custom_fonts/font = SubResource( 10 )
+custom_styles/hover = SubResource( 11 )
+custom_styles/pressed = SubResource( 12 )
+custom_styles/focus = SubResource( 13 )
+custom_styles/normal = SubResource( 14 )
+text = "Retornar"
+
+[connection signal="value_changed" from="SettingsMenuVBox/CenterSettings/SettingsOrganizer/MasterVol/MasterSlider" to="." method="_on_MasterSlider_value_changed"]
+[connection signal="value_changed" from="SettingsMenuVBox/CenterSettings/SettingsOrganizer/MusicVol/MusicSlider" to="." method="_on_MusicSlider_value_changed"]
+[connection signal="value_changed" from="SettingsMenuVBox/CenterSettings/SettingsOrganizer/SFXVol/SFXSlider" to="." method="_on_SFXSlider_value_changed"]
+[connection signal="item_selected" from="SettingsMenuVBox/CenterSettings/SettingsOrganizer/DisplayMode/DisplayModeOption" to="." method="_on_DisplayModeOption_item_selected"]
+[connection signal="pressed" from="SettingsMenuVBox/ReturnButtonMargin/ReturnButton" to="." method="_on_ReturnButton_pressed"]
