@@ -1,8 +1,7 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://scripts/MainMenu.gd" type="Script" id=1]
 [ext_resource path="res://fonts/godiva-reguler.ttf" type="DynamicFontData" id=2]
-[ext_resource path="res://scenes/PauseMenu.tscn" type="PackedScene" id=3]
 
 [sub_resource type="DynamicFont" id=3]
 size = 120
@@ -120,13 +119,6 @@ custom_styles/pressed = SubResource( 9 )
 custom_styles/focus = SubResource( 4 )
 custom_styles/normal = SubResource( 5 )
 text = "Sair"
-
-[node name="PauseMenu" parent="." instance=ExtResource( 3 )]
-visible = false
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_right = 1280.0
-margin_bottom = 720.0
 
 [connection signal="pressed" from="MainMenuVBox/OptionMargin/OptionButtons/StartMargin/StartButton" to="." method="_on_StartButton_pressed"]
 [connection signal="pressed" from="MainMenuVBox/OptionMargin/OptionButtons/OptionsMargin/OptionsButton" to="." method="_on_OptionsButton_pressed"]
