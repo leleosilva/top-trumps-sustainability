@@ -38,9 +38,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
-margin_left = 427.0
+margin_left = 383.0
 margin_top = 138.0
-margin_right = 853.0
+margin_right = 896.0
 margin_bottom = 582.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -48,23 +48,23 @@ rect_min_size = Vector2( 300, 200 )
 size_flags_horizontal = 0
 custom_constants/separation = 20
 
-[node name="Label" type="Label" parent="CenterContainer/VBoxContainer"]
-margin_right = 426.0
+[node name="PausedLabel" type="Label" parent="CenterContainer/VBoxContainer"]
+margin_right = 513.0
 margin_bottom = 144.0
 custom_fonts/font = SubResource( 2 )
-text = "Paused"
+text = "Pausado"
 align = 1
 
 [node name="Control" type="Control" parent="CenterContainer/VBoxContainer"]
 margin_top = 164.0
-margin_right = 426.0
+margin_right = 513.0
 margin_bottom = 264.0
 rect_min_size = Vector2( 0, 100 )
 
 [node name="ContinueMargin" type="MarginContainer" parent="CenterContainer/VBoxContainer"]
-margin_left = 124.0
+margin_left = 168.0
 margin_top = 284.0
-margin_right = 301.0
+margin_right = 345.0
 margin_bottom = 324.0
 size_flags_horizontal = 4
 custom_constants/margin_right = 0
@@ -83,9 +83,9 @@ custom_styles/normal = SubResource( 6 )
 text = "Continuar"
 
 [node name="MainMenuMargin" type="MarginContainer" parent="CenterContainer/VBoxContainer"]
-margin_left = 81.0
+margin_left = 124.0
 margin_top = 344.0
-margin_right = 345.0
+margin_right = 388.0
 margin_bottom = 384.0
 size_flags_horizontal = 4
 
@@ -103,9 +103,9 @@ custom_styles/normal = SubResource( 6 )
 text = "Menu principal"
 
 [node name="QuitMargin" type="MarginContainer" parent="CenterContainer/VBoxContainer"]
-margin_left = 102.0
+margin_left = 145.0
 margin_top = 404.0
-margin_right = 324.0
+margin_right = 367.0
 margin_bottom = 444.0
 size_flags_horizontal = 4
 
