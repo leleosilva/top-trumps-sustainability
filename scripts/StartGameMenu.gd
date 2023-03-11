@@ -17,7 +17,8 @@ func _ready():
 
 
 func _on_ReturnButton_pressed():
-	get_tree().change_scene("res://scenes/MainMenu.tscn")
+	if get_tree().change_scene("res://scenes/MainMenu.tscn") != OK:
+		print("An unexpected error occured when trying to return to the main menu.")
 
 
 func _on_DecreasePlayersButton_pressed():

@@ -16,11 +16,13 @@ func _ready():
 #	pass
 
 func _on_StartButton_pressed():
-	get_tree().change_scene("res://scenes/StartGameMenu.tscn")
+	if get_tree().change_scene("res://scenes/StartGameMenu.tscn") != OK:
+		print("An unexpected error occured when trying to switch to the start menu.")
 
 
 func _on_OptionsButton_pressed():
-	pass # Replace with function body.
+	if get_tree().change_scene("res://scenes/PauseMenu.tscn") != OK:
+		print("An unexpected error occured when trying to pause the game.")
 
 
 func _on_ExitButton_pressed():
