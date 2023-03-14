@@ -1,24 +1,23 @@
 extends Label
 
-var count = 2 setget _set_count
-
 func _ready():
-	set_text(str(2))
+	Global.number_of_players = 2
+	set_text(str(Global.number_of_players))
 
-func _set_count(value):
+func change_number_of_players(value):
 	if value < 2:
 		value = 2
 	elif value > 4:
 		value = 4
 		
-	count = value
-	set_text(str(count))
+	Global.number_of_players = value
+	set_text(str(Global.number_of_players))
 
 func increment():
-	set('count', count+1)
+	change_number_of_players(Global.number_of_players + 1)
 	
 func decrement():
-	set('count', count-1)
+	change_number_of_players(Global.number_of_players - 1)
 
 func _on_IncreasePlayersButton_pressed():
 	increment()
