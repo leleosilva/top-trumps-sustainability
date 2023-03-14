@@ -19,6 +19,7 @@ config/icon="res://icon.png"
 GlobalSettings="*res://src/Loader/global_settings.gd"
 Save="*res://src/Loader/save.gd"
 Global="*res://src/Loader/global.gd"
+SceneTransition="*res://src/Loader/scene transition/SceneTransition.tscn"
 
 [display]
 

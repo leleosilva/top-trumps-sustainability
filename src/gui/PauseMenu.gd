@@ -17,8 +17,7 @@ func _on_ContinueButton_pressed():
 
 
 func _on_MainMenuButton_pressed():
-	if get_tree().change_scene("res://src/gui/MainMenu.tscn") != OK:
-		print("An unexpected error occured when trying to switch to the main menu.")
+	SceneTransition.change_scene("res://src/gui/MainMenu.tscn")
 	self.is_paused = false
 
 func _on_QuitButton_pressed():
